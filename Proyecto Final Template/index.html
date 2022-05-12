@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokemon Battle</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              pokemon: {
+                red: '#EF534F',
+                blue: '#3761A8',
+                yellow: '#FFCA1B',
+              },
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="min-h-screen bg-gray-100">
+    <nav class="py-5 bg-pokemon-red">
+      <h1
+        class="text-6xl text-center text-pokemon-yellow border border-pokemon-red font-pokemon"
+      >
+        Pokemon Battle
+      </h1>
+    </nav>
+    <main class="container h-full mx-auto py-5">
+      <div class="grid grid-cols-2 gap-10">
+        <div class="bg-white rounded-lg shadow-md p-5">
+          <p>Team 1 - Choose your Pokemon</p>
+          <div class="border border-gray-100 my-3 p-3 rounded-lg">
+            <div>
+              <label for="team1-pokemon1" class="mr-3">#1</label>
+              <select
+                class="border border-pokemon-blue rounded-lg mr-3 w-8/12 p-1"
+                name="team1-pokemon1"
+                onchange="handleSelect(this)"
+              >
+                <option value="0" selected>Select Your Pokemon</option>
+              </select>
+              <span class="basis-auto">
+                <img
+                  src="./assets/pokeball.jpeg"
+                  alt="Pokemon"
+                  class="w-14 h-14 inline"
+                  id="team1-pokemon1"
+                />
+              </span>
+            </div>
+            <div>
+              <label for="team1-pokemon2" class="mr-3">#2</label>
+              <select
+                class="border border-pokemon-blue rounded-lg mr-3 w-8/12 p-1"
+                name="team1-pokemon2"
+                onchange="handleSelect(this)"
+              >
+                <option value="0" selected>Select Your Pokemon</option>
+              </select>
+              <span class="basis-auto">
+                <img
+                  src="./assets/pokeball.jpeg"
+                  alt="Pokemon"
+                  class="w-14 h-14 inline"
+                  id="team1-pokemon2"
+                />
+              </span>
+            </div>
+            <div>
+              <label for="team1-pokemon3" class="mr-3">#3</label>
+              <select
+                class="border border-pokemon-blue rounded-lg mr-3 w-8/12 p-1"
+                name="team1-pokemon3"
+                onchange="handleSelect(this)"
+              >
+                <option value="0" selected>Select Your Pokemon</option>
+              </select>
+              <span class="basis-auto">
+                <img
+                  src="./assets/pokeball.jpeg"
+                  alt="Pokemon"
+                  class="w-14 h-14 inline"
+                  id="team1-pokemon3"
+                />
+              </span>
+            </div>
+            <div>
+              <label for="team1-pokemon4" class="mr-3">#4</label>
+              <select
+                class="border border-pokemon-blue rounded-lg mr-3 w-8/12 p-1"
+                name="team1-pokemon4"
+                onchange="handleSelect(this)"
+              >
+                <option value="0" selected>Select Your Pokemon</option>
+              </select>
+              <span class="basis-auto">
+                <img
+                  src="./assets/pokeball.jpeg"
+                  alt="Pokemon"
+                  class="w-14 h-14 inline"
+                  id="team1-pokemon4"
+                />
+              </span>
+            </div>
+            <div>
+              <label for="team1-pokemon5" class="mr-3">#5</label>
+              <select
+                class="border border-pokemon-blue rounded-lg mr-3 w-8/12 p-1"
+                name="team1-pokemon5"
+                onchange="handleSelect(this)"
+              >
+                <option value="0" selected>Select Your Pokemon</option>
+              </select>
+              <span class="basis-auto">
+                <img
+                  src="./assets/pokeball.jpeg"
+                  alt="Pokemon"
+                  class="w-14 h-14 inline"
+                  id="team1-pokemon5"
+                />
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white rounded-lg shadow-md p-5">
+          <p>Team 2 - Choose your Pokemon</p>
+          <div class="border border-gray-100 my-3 p-3 rounded-lg">
+            <div>
+              <label for="team2-pokemon1" class="mr-3">#1</label>
+              <select
+                class="border border-pokemon-blue rounded-lg mr-3 w-8/12 p-1"
+                name="team2-pokemon1"
+                onchange="handleSelect(this)"
+              >
+                <option value="0" selected>Select Your Pokemon</option>
+              </select>
+              <span class="basis-auto">
+                <img
+                  src="./assets/pokeball.jpeg"
+                  alt="Pokemon"
+                  class="w-14 h-14 inline"
+                  id="team2-pokemon1"
+                />
+              </span>
+            </div>
+            <div>
+              <label for="team2-pokemon2" class="mr-3">#2</label>
+              <select
+                class="border border-pokemon-blue rounded-lg mr-3 w-8/12 p-1"
+                name="team2-pokemon2"
+                onchange="handleSelect(this)"
+              >
+                <option value="0" selected>Select Your Pokemon</option>
+              </select>
+              <span class="basis-auto">
+                <img
+                  src="./assets/pokeball.jpeg"
+                  alt="Pokemon"
+                  class="w-14 h-14 inline"
+                  id="team2-pokemon2"
+                />
+              </span>
+            </div>
+            <div>
+              <label for="team2-pokemon3" class="mr-3">#3</label>
+              <select
+                class="border border-pokemon-blue rounded-lg mr-3 w-8/12 p-1"
+                name="team2-pokemon3"
+                onchange="handleSelect(this)"
+              >
+                <option value="0" selected>Select Your Pokemon</option>
+              </select>
+              <span class="basis-auto">
+                <img
+                  src="./assets/pokeball.jpeg"
+                  alt="Pokemon"
+                  class="w-14 h-14 inline"
+                  id="team2-pokemon3"
+                />
+              </span>
+            </div>
+            <div>
+              <label for="team2-pokemon4" class="mr-3">#4</label>
+              <select
+                class="border border-pokemon-blue rounded-lg mr-3 w-8/12 p-1"
+                name="team2-pokemon4"
+                onchange="handleSelect(this)"
+              >
+                <option value="0" selected>Select Your Pokemon</option>
+              </select>
+              <span class="basis-auto">
+                <img
+                  src="./assets/pokeball.jpeg"
+                  alt="Pokemon"
+                  class="w-14 h-14 inline"
+                  id="team2-pokemon4"
+                />
+              </span>
+            </div>
+            <div>
+              <label for="team2-pokemon5" class="mr-3">#5</label>
+              <select
+                class="border border-pokemon-blue rounded-lg mr-3 w-8/12 p-1"
+                name="team2-pokemon5"
+                onchange="handleSelect(this)"
+              >
+                <option value="0" selected>Select Your Pokemon</option>
+              </select>
+              <span class="basis-auto">
+                <img
+                  src="./assets/pokeball.jpeg"
+                  alt="Pokemon"
+                  class="w-14 h-14 inline"
+                  id="team2-pokemon5"
+                />
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="w-full bg-white rounded-lg shadow-lg my-10 p-5 flex flex-col justify-center items-center"
+        id="body"
+      >
+        <button
+          class="hover:bg-pokemon-blue text-pokemon-blue hover:text-white inline px-5 py-3 rounded-lg border border-pokemon-blue transition-all duration-125"
+          type="button"
+          onclick="startFight()"
+        >
+          Start Fight
+        </button>
+      </div>
+    </main>
+    <script src="./scripts/index.js"></script>
+    <script src="./scripts/to-do-1.js"></script>
+    <script src="./scripts/to-do-2.js"></script>
+  </body>
+</html>
